@@ -1,3 +1,9 @@
+<script setup lang="ts">
+  import { type BlogPost } from "~/types";
+  const { data: posts } = await useAsyncData<BlogPost[]>('posts', () => {
+    return queryContent<BlogPost>('/blog').find()
+  })
+</script>
 <template>
     <main>
       <h1>The Blog</h1>
@@ -10,9 +16,3 @@
     </main>
   </template>
   
-  <script setup lang="ts">
-    import { type BlogPost } from "../../types";
-    const { data: posts } = await useAsyncData<BlogPost[]>('posts', () => {
-      return queryContent<BlogPost>('/blog').find()
-    })
-  </script>
