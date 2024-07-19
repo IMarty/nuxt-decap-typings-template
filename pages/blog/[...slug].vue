@@ -13,9 +13,10 @@
       <h1>
         {{ post.title }}
       </h1>
-      <p>{{ post.description }}</p>
+      <p>{{ post.short_description }}</p>
     </div>
     <hr>
+    <!-- or post.body -->
     <ContentDoc />
   </main>
 </template>

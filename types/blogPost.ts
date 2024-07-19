@@ -3,7 +3,10 @@ export interface BlogPost {
     slug:string;
     title: string;
     date: Date;
-    description: string;
+    created_at:string;
+    updated_at:string;
+    short_description: string;
+    long_description: string;
     body: string;
   }
   

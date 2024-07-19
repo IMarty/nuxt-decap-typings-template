@@ -8,6 +8,6 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <h3>{{ blogProp.title }}</h3>
+    <h3>{{ blogProp.title }} {{ blogProp.created_at }}</h3>
     <NuxtLink :to="blogProp._path">Read more</NuxtLink>
 </template>

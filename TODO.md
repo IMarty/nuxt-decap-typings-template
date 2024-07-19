@@ -1,0 +1,5 @@
+- Make the layout work
+- Add a simple Navbar with NuxtLink
+- Create simple HTML structure for the pages
+- Make the catalogue of trainings work
+- (bonus) Deploy to netlify and make decapCMS work 
