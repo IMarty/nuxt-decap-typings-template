@@ -1,11 +1,7 @@
     <script setup lang="ts">    
-    import { type BlogPost } from "~/types";
+    import type { BlogPost } from "~/types";
     const route = useRoute()
     const actualPath = route.path.replace(/\/$/, '');
-    
-    
-    
-    
     const { data: post, error } = await useAsyncData<BlogPost>(`hello`, () =>
         queryContent<BlogPost>(actualPath).findOne()
     );
